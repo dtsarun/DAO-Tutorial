@@ -15,12 +15,12 @@ async function main() {
   const CryptoDevsDAO = await ethers.getContractFactory("CryptoDevsDAO");
   const cryptoDevsDAO = await CryptoDevsDAO.deploy(
     fakeNftMarketplace.address,
-    CRYPTODEVS_NFT_CONTRACT_ADDRESS
-//    {
+    CRYPTODEVS_NFT_CONTRACT_ADDRESS,
+    {
       // This assumes your account has at least 1 ETH in it's account
       // Change this value as you want
-  //    value: ethers.utils.parseEther("0.1"),
-   // }
+      value: ethers.utils.parseEther("0.1"),
+    }
   );
   await cryptoDevsDAO.deployed();
 
